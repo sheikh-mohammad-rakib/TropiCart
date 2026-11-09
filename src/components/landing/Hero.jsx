@@ -41,8 +41,14 @@ export default function Hero() {
         <div className="reveal-up">
           <div className="landing-product-showcase rounded-box border border-base-300 bg-base-100 p-5 shadow-xl sm:p-7">
             <div className="grid gap-4 sm:grid-cols-2">
-              <article className="card bg-base-200 shadow-sm">
-                <figure className="h-36 bg-linear-to-br from-secondary/45 to-warning/35" />
+              <article className="card overflow-hidden bg-base-200 shadow-sm">
+                <figure className="h-40 overflow-hidden">
+                  <img
+                    src="/images/hero/summer-linen-set.jpg"
+                    alt="Summer Linen Set"
+                    className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                </figure>
                 <div className="card-body p-4">
                   <h3 className="card-title text-base">Summer Linen Set</h3>
                   <p className="text-sm text-base-content/70">Breezy texture for warm evenings.</p>
@@ -50,8 +56,14 @@ export default function Hero() {
                 </div>
               </article>
 
-              <article className="card bg-base-200 shadow-sm">
-                <figure className="h-36 bg-linear-to-br from-primary/45 to-info/35" />
+              <article className="card overflow-hidden bg-base-200 shadow-sm">
+                <figure className="h-40 overflow-hidden">
+                  <img
+                    src="/images/hero/lagoon-glassware.jpg"
+                    alt="Lagoon Glassware"
+                    className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                </figure>
                 <div className="card-body p-4">
                   <h3 className="card-title text-base">Lagoon Glassware</h3>
                   <p className="text-sm text-base-content/70">Hand-finished pieces for your table.</p>

@@ -2,22 +2,22 @@ const categories = [
   {
     title: "Home & Living",
     description: "Airy decor, textured linens, and natural accents.",
-    style: "from-primary/35 to-accent/30",
+    image: "/images/categories/home-living.jpg",
   },
   {
     title: "Beauty & Wellness",
     description: "Daily rituals with gentle formulas and clean scents.",
-    style: "from-secondary/35 to-warning/25",
+    image: "/images/categories/beauty-wellness.jpg",
   },
   {
     title: "Fashion Essentials",
     description: "Effortless silhouettes for warm days and city nights.",
-    style: "from-info/35 to-primary/20",
+    image: "/images/categories/fashion-essentials.jpg",
   },
   {
     title: "Travel Picks",
     description: "Compact favorites designed for movement and ease.",
-    style: "from-accent/35 to-success/25",
+    image: "/images/categories/travel-picks.jpg",
   },
 ];
 
@@ -36,10 +36,16 @@ export default function Categories() {
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {categories.map((item) => (
             <article
-              className="card border border-base-300 bg-base-100 shadow-sm transition-transform duration-300 hover:-translate-y-1"
+              className="card overflow-hidden border border-base-300 bg-base-100 shadow-sm transition-transform duration-300 hover:-translate-y-1"
               key={item.title}
             >
-              <figure className={`h-28 bg-linear-to-br ${item.style}`} />
+              <figure className="h-36 overflow-hidden bg-base-200">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                />
+              </figure>
               <div className="card-body p-5">
                 <h3 className="card-title text-lg">{item.title}</h3>
                 <p className="text-sm text-base-content/70">{item.description}</p>

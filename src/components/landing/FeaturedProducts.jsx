@@ -5,7 +5,7 @@ const products = [
     price: "$28",
     rating: "4.8",
     badge: "Best Seller",
-    gradient: "from-secondary/40 to-error/20",
+    image: "/images/products/coral-breeze-candle.jpg",
   },
   {
     name: "Shoreline Tote",
@@ -13,7 +13,7 @@ const products = [
     price: "$44",
     rating: "4.7",
     badge: "New",
-    gradient: "from-primary/40 to-info/25",
+    image: "/images/products/shoreline-tote.jpg",
   },
   {
     name: "Palm Weave Throw",
@@ -21,7 +21,7 @@ const products = [
     price: "$62",
     rating: "4.9",
     badge: "Editor Pick",
-    gradient: "from-accent/35 to-success/20",
+    image: "/images/products/palm-weave-throw.jpg",
   },
   {
     name: "Sunset Hydration Kit",
@@ -29,7 +29,7 @@ const products = [
     price: "$36",
     rating: "4.6",
     badge: "Top Rated",
-    gradient: "from-warning/35 to-secondary/25",
+    image: "/images/products/sunset-hydration-kit.jpg",
   },
 ];
 
@@ -47,8 +47,14 @@ export default function FeaturedProducts() {
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {products.map((item) => (
-            <article className="card border border-base-300 bg-base-100 shadow-sm" key={item.name}>
-              <figure className={`h-40 bg-linear-to-br ${item.gradient}`} />
+            <article className="card overflow-hidden border border-base-300 bg-base-100 shadow-sm" key={item.name}>
+              <figure className="h-44 overflow-hidden bg-base-200">
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                />
+              </figure>
               <div className="card-body p-5">
                 <div className="flex items-center justify-between gap-2">
                   <span className="badge badge-outline badge-sm">{item.badge}</span>
